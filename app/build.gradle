@@ -3,15 +3,15 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion AppConfigs.compile_sdk_version
+    buildToolsVersion AppConfigs.build_tools_version
 
     defaultConfig {
-        applicationId "com.update.oneu"
-        minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        applicationId AppConfigs.application_id
+        minSdkVersion AppConfigs.min_sdk_version
+        targetSdkVersion AppConfigs.target_sdk_version
+        versionCode AppConfigs.version_code
+        versionName AppConfigs.version_name
     }
 
     buildTypes {
@@ -26,7 +26,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation(Libs.kotlin_stdlib)
     implementation(Libs.androidx_appcompat)
-    implementation(Libs.androidx_constraintlayoutt)
+    implementation(Libs.androidx_constraintlayout)
     implementation(Libs.ktx_core)
     implementation(Libs.ktx_fragment)
     implementation(Libs.ktx_lifecycle_viewmodel)
